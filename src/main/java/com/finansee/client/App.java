@@ -19,7 +19,7 @@ public class App extends Application {
 
         primaryStage.setTitle("Finance App");
         primaryStage.setScene(scene);
-        primaryStage.setResizable(false);
+        primaryStage.setResizable(true);
         primaryStage.show();
     }
 
