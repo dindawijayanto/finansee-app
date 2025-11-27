@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+
+<ScrollPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.finansee.controller.DashboardController"
+            fitToWidth="true" styleClass="scroll-pane-clean" hbarPolicy="NEVER">
+
+    <VBox spacing="20" styleClass="root">
+        <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+        <!-- Header -->
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <VBox>
+                <Label text="Hai," styleClass="text-sub"/>
+                <Label text="Pak Purbaya" styleClass="text-header"/>
+            </VBox>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="🔔" styleClass="icon-btn"/>
+        </HBox>
+
+        <!-- Kartu Balance -->
+        <VBox styleClass="balance-card" spacing="15">
+            <HBox spacing="20">
+                <VBox>
+                    <Label text="Total Balance" styleClass="card-label"/>
+                    <Label fx:id="totalBalanceLabel" text="Rp7.783,00" styleClass="card-value-lg"/>
+                </VBox>
+                <Region HBox.hgrow="ALWAYS"/>
+                <VBox alignment="TOP_RIGHT">
+                    <Label text="Total Expense" styleClass="card-label"/>
+                    <Label fx:id="totalExpenseLabel" text="-Rp1.187,40" styleClass="card-value-lg-neg"/>
+                </VBox>
+            </HBox>
+
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label text="30%" textFill="white" style="-fx-font-weight:bold;"/>
+                <ProgressBar fx:id="expenseProgress" progress="0.3" maxWidth="Infinity" HBox.hgrow="ALWAYS" styleClass="custom-progress"/>
+                <Label text="Rp20.000,00" textFill="white" style="-fx-font-size:10px;"/>
+            </HBox>
+
+            <Label text="☑ 30% Of Your Expenses, Looks Good." styleClass="card-subtext"/>
+        </VBox>
+
+        <!-- Kartu Mini -->
+        <HBox spacing="15">
+            <VBox styleClass="mini-card-pink" HBox.hgrow="ALWAYS" alignment="CENTER_LEFT">
+                <Label text="Revenue Last Week" styleClass="card-label-white"/>
+                <Label text="Rp4.000,00" styleClass="card-value-md"/>
+            </VBox>
+            <VBox styleClass="mini-card-pink" HBox.hgrow="ALWAYS" alignment="CENTER_LEFT">
+                <Label text="Food Last Week" styleClass="card-label-white"/>
+                <Label text="-Rp100,00" styleClass="card-value-md"/>
+            </VBox>
+        </HBox>
+
+        <!-- Filter Tab -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Button text="Daily" styleClass="tab-btn-active"/>
+            <Button text="Weekly" styleClass="tab-btn"/>
+            <Button text="Monthly" styleClass="tab-btn"/>
+        </HBox>
+
+        <!-- List Transaksi -->
+        <VBox fx:id="transactionContainer" spacing="10"/>
+
+        <!-- NEW: Article Card at Bottom -->
+        <Label text="Article" styleClass="text-header" style="-fx-font-size:16px;"/>
+
+        <HBox styleClass="article-card" spacing="15" onMouseClicked="#handleArticleCardClick">
+            <!-- Thumbnail Image Placeholder -->
+            <StackPane styleClass="article-thumb">
+                <Label text="IMG" textFill="white" style="-fx-font-size:10px;"/>
+            </StackPane>
+
+            <VBox spacing="5" HBox.hgrow="ALWAYS" alignment="CENTER_LEFT">
+                <Label text="Emiten Kripto Jeblok, Investor Ritel Rugi Rp281,46 T"
+                       wrapText="true" styleClass="article-card-title" maxWidth="220"/>
+                <HBox spacing="10">
+                    <Label text="📅 20 Oct 2025" styleClass="article-card-meta"/>
+                    <Label text="🕒 10:45" styleClass="article-card-meta"/>
+                </HBox>
+            </VBox>
+        </HBox>
+
+        <!-- Spacer bawah agar scroll lebih lega -->
+        <Region prefHeight="20"/>
+
+    </VBox>
+</ScrollPane>

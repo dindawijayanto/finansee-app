@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.finansee.controller.MainLayoutController"
+            fx:id="mainContainer"
+            prefWidth="380" prefHeight="800"
+            stylesheets="@../css/styles.css">
+
+    <bottom>
+        <HBox spacing="25" alignment="CENTER" styleClass="bottom-nav">
+            <padding><Insets top="15" bottom="20" left="15" right="15"/></padding>
+            <Button text="🏠" onAction="#handleHomeClick" styleClass="nav-btn-active"/>
+            <Button text="📊" styleClass="nav-btn"/>
+            <Button text="⇄" onAction="#handleArticleClick" styleClass="nav-btn"/>
+            <Button text="📚" styleClass="nav-btn"/>
+            <Button text="👤" styleClass="nav-btn"/>
+        </HBox>
+    </bottom>
+</BorderPane>
