@@ -1,0 +1,94 @@
+.root {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-background-color: linear-gradient(to bottom right, #8E84F5, #7568F0);
+}
+
+/* ScrollPane Bersih */
+.scroll-pane { -fx-background-color: transparent; }
+.scroll-pane > .viewport { -fx-background-color: transparent; }
+.scroll-pane .scroll-bar:horizontal, .scroll-pane .scroll-bar:vertical {
+    -fx-opacity: 0; -fx-padding: 0;
+}
+
+/* =========================================
+   2. REUSABLE COMPONENTS (KONSEP SAMA)
+   ========================================= */
+
+/* [BASE] KERTAS PUTIH (Visual Dasar) */
+/* Gunakan ini di SEMUA halaman yang pakai konsep kertas putih */
+.sheet-base {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 30 30 0 0; /* Lengkung Atas */
+    -fx-min-height: 800; /* Memenuhi layar ke bawah */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, -2);
+}
+
+.sheet-dashboard {
+    -fx-padding: 30 20 100 20;
+}
+
+.sheet-article {
+    -fx-padding: 30 20 100 20;
+}
+
+/* Navbar Floating */
+.floating-navbar {
+    -fx-background-color: #E9F3FF;
+    -fx-background-radius: 30 30 0 0;
+    -fx-padding: 15 25 15 25;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 15, 0, 0, -4);
+}
+
+/* Card Pink */
+.card-pink {
+    -fx-background-color: #F89CAB;
+    -fx-background-radius: 25;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 15, 0, 0, 8);
+    -fx-cursor: hand;
+}
+
+/* Card Artikel */
+.card-article {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 5);
+    -fx-cursor: hand;
+    -fx-border-color: #FFB08E; /* Stroke Orange */
+    -fx-border-width: 1.5;
+    -fx-border-radius: 20;
+}
+
+/* =========================================
+   3. TYPOGRAPHY (WARNA)
+   ========================================= */
+/* Header Ungu (Teks Putih) */
+.text-greeting-name { -fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold; }
+.text-greeting-small { -fx-text-fill: white; -fx-font-size: 14px; }
+.text-balance { -fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold; }
+.text-expense { -fx-text-fill: #FF8F8F; -fx-font-size: 20px; -fx-font-weight: bold; }
+.text-label-light { -fx-text-fill: #E0E0E0; -fx-font-size: 12px; }
+
+/* Konten Putih (Teks Navy #091956) */
+.text-dark-title { -fx-text-fill: #091956; -fx-font-weight: bold; -fx-font-size: 14px; }
+.text-dark-subtitle { -fx-text-fill: #091956; -fx-font-size: 11px; }
+.text-dark-category { -fx-text-fill: #091956; -fx-font-size: 12px; }
+.text-dark-amount { -fx-text-fill: #091956; -fx-font-weight: bold; -fx-font-size: 14px; }
+.text-dark-header { -fx-text-fill: #091956; -fx-font-size: 18px; -fx-font-weight: bold; }
+
+/* =========================================
+   4. MISC (Buttons, Icons)
+   ========================================= */
+.nav-btn-icon { -fx-background-color: transparent; -fx-padding: 10; -fx-cursor: hand; }
+.nav-btn-icon:hover { -fx-scale-x: 1.1; -fx-scale-y: 1.1; }
+.nav-icon-fill { -fx-fill: #A0A0A0; }
+.nav-icon-fill-active { -fx-fill: #7568F0; }
+.nav-btn-add-circle { -fx-fill: #7568F0; -fx-effect: dropshadow(three-pass-box, rgba(117, 104, 240, 0.4), 10, 0, 0, 4); -fx-cursor: hand; }
+
+.btn-filter { -fx-background-color: transparent; -fx-text-fill: #091956; -fx-cursor: hand;}
+.btn-filter-active { -fx-background-color: #8E84F5; -fx-text-fill: #091956; -fx-background-radius: 12; -fx-font-weight: bold; -fx-cursor: hand;}
+
+.header-article-bg { -fx-background-color: linear-gradient(to right, #8E84F5, #7568F0); }
+.btn-back { -fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 0; }
+.article-image-placeholder { -fx-fill: lightgray; -fx-arc-width: 30; -fx-arc-height: 30; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 5); }

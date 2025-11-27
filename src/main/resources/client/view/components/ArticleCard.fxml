@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+<HBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.finansee.client.controller.components.ArticleCardController"
+      styleClass="card-article" spacing="10" onMouseClicked="#onClick">
+
+    <ImageView fitWidth="80" fitHeight="80" style="-fx-background-color: #091956;"/>
+
+    <VBox spacing="5" HBox.hgrow="ALWAYS">
+        <Label fx:id="titleLabel" text="Judul Artikel" wrapText="true" style="-fx-font-weight: bold; -fx-font-size: 12;"/>
+        <Label text="Short description..." wrapText="true" style="-fx-text-fill: #091956; -fx-font-size: 10;"/>
+
+        <HBox spacing="10">
+            <Label fx:id="dateLabel" text="20 Oct" style="-fx-font-size: 9;"/>
+            <Label fx:id="timeLabel" text="10:45" style="-fx-font-size: 9;"/>
+        </HBox>
+    </VBox>
+</HBox>

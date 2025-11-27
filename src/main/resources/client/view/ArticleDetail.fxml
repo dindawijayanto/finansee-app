@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.finansee.client.controller.ArticleDetailController"
+           alignment="TOP_CENTER" style="-fx-background-color: #F5F7FA;">
+
+    <VBox prefHeight="200" styleClass="header-article-bg" maxHeight="-Infinity" StackPane.alignment="TOP_CENTER"/>
+
+    <VBox spacing="0" StackPane.alignment="TOP_CENTER">
+
+        <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-padding: 40 20 20 20;">
+            <Button onAction="#onBackClicked" styleClass="btn-back" text="←" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label style="-fx-text-fill: white; -fx-font-size: 18; -fx-font-weight: bold;" text="Articles" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button text=" " visible="false" style="-fx-font-size: 24px;" />
+        </HBox>
+
+        <ScrollPane fitToWidth="true" pannable="true" hbarPolicy="NEVER" vbarPolicy="NEVER"
+                    style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+
+            <VBox styleClass="sheet-base, sheet-article" spacing="20">
+
+                <Label fx:id="titleLabel" styleClass="text-dark-header"
+                       text="Emiten Kripto Jeblok, Investor Ritel Rugi Rp281,46 T"
+                       wrapText="true" style="-fx-font-size: 22px;"/>
+
+                <StackPane alignment="CENTER">
+                    <Rectangle width="340" height="180" styleClass="article-image-placeholder"/>
+                </StackPane>
+
+                <HBox spacing="15">
+                    <HBox alignment="CENTER_LEFT" spacing="8">
+                        <Label text="📅" style="-fx-text-fill: #8F9BB3;"/>
+                        <Label fx:id="dateLabel" text="20 Oct 2025" styleClass="text-dark-subtitle"/>
+                    </HBox>
+                    <Region HBox.hgrow="ALWAYS" />
+                    <HBox alignment="CENTER_LEFT" spacing="8">
+                        <Label text="🕒" style="-fx-text-fill: #8F9BB3;"/>
+                        <Label fx:id="timeLabel" text="10:45" styleClass="text-dark-subtitle"/>
+                    </HBox>
+                </HBox>
+
+                <Label fx:id="contentLabel"
+                       style="-fx-text-fill: #4A4A4A; -fx-font-size: 14; -fx-line-spacing: 5;"
+                       textAlignment="JUSTIFY" wrapText="true"
+                       text="Jakarta, CNBC Indonesia - Investor ritel saham-saham emiten pemilik Bitcoin dilaporkan telah kehilangan sekitar US$17 miliar atau sekitar Rp281,46 triliun. Perusahaan publik yang dimaksud diantaranya perusahaan investasi asal Jepang Metaplanet hingga perusahaan teknologi asal Amerika Serikat Michael Saylor’s Strategy. Menurut laporan terbaru 10x Research, kerugian tersebut terjadi akibat imbal hasil saham yang sebelumnya membuat valuasi perusahaan jauh di atas nilai kepemilikan Bitcoin mereka, namun kini telah menguap." />
+
+                <Label fx:id="authorLabel"
+                       style="-fx-text-fill: #7568F0; -fx-font-style: italic; -fx-font-weight: bold;"
+                       text="CNBC Indonesia"/>
+
+            </VBox>
+        </ScrollPane>
+    </VBox>
+
+</StackPane>
